@@ -1,5 +1,5 @@
-require 'helper'
-require 'freesound'
+require "helper"
+require "freesound"
 
 describe "finding a sound" do
   let(:api_key) { ENV.fetch("FREESOUND_KEY") }

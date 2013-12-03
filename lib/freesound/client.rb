@@ -10,10 +10,14 @@ module Freesound
       end
     end
 
+    def search(query)
+      Resources::Sound.get("search/", query_params(q: query))
+    end
+
     private
 
-    def query_params
-      {api_key: api_key}
+    def query_params(additional={})
+      {api_key: api_key}.merge(additional)
     end
   end
 end
