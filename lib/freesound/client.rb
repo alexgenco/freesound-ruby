@@ -10,6 +10,14 @@ module Freesound
       end
     end
 
+    def user(username)
+      begin
+        Resources::User.find(username, params: query_params)
+      rescue ActiveResource::BadRequest
+        raise ResourceNotFound, "User with username '#{username}' not found"
+      end
+    end
+
     def search(query)
       Resources::Sound.get("search/", query_params(q: query))
     end
