@@ -1,7 +1,7 @@
 module Freesound
   class ResourceNotFound < RuntimeError; end
 
-  class Client < Struct.new(:api_key)
+  class Client
     def sound(id)
       begin
         Resources::Sound.find(id, params: query_params)
@@ -25,7 +25,7 @@ module Freesound
     private
 
     def query_params(additional={})
-      {api_key: api_key}.merge(additional)
+      {api_key: Freesound.api_key}.merge(additional)
     end
   end
 end

@@ -2,8 +2,7 @@ require "helper"
 require "freesound"
 
 describe "finding a user" do
-  let(:api_key) { ENV.fetch("FREESOUND_KEY") }
-  let(:client)  { Freesound::Client.new(api_key) }
+  let(:client) { Freesound::Client.new }
 
   context "that exists" do
     let(:user) do
@@ -16,6 +15,12 @@ describe "finding a user" do
       expect(user.username).to eq("alexgenco")
       expect(user.ref).to match(/\/people\/alexgenco/)
     end
+
+    it "has many sounds" do
+      VCR.use_cassette(:alexgenco_sounds) do
+        expect(user.sounds).to respond_to(:to_ary)
+      end
+    end
   end
 
   context "that doesn't exist" do
@@ -24,7 +29,7 @@ describe "finding a user" do
         VCR.use_cassette(:user_unknown) do
           client.user("LOLWHOAMI__123")
         end
-      }.to raise_error(Freesound::ResourceNotFound, 
+      }.to raise_error(Freesound::ResourceNotFound,
                        /user with username 'LOLWHOAMI__123'/i)
     end
   end
