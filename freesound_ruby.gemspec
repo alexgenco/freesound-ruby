@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Freesound::VERSION
   spec.authors       = ["Alex Genco"]
   spec.email         = ["alexgenco@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.summary       = "A Ruby library for consuming the Freesound.org API"
+  spec.homepage      = "https://github.com/alexgenco/freesound_ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
