@@ -2,6 +2,8 @@
 
 Consume the [Freesound.org](http://www.freesound.org) API with Ruby.
 
+[![Build Status](https://travis-ci.org/alexgenco/freesound_ruby.png)](https://travis-ci.org/alexgenco/freesound_ruby)
+
 ## Installation
 
 Add this line to your application's Gemfile:
