@@ -45,3 +45,6 @@ doc
 #*.rbc
 
 *.gem
+
+# VCR Cassettes
+spec/fixtures/vcr_cassettes
