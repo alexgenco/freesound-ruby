@@ -1,7 +1,8 @@
 language: ruby
 env:
-  secure: "KzqMaeNlAYR0WPJhtc76rV43ARaMzef/7biRGd0aWpep1M+PF6dqQe6wOchlgxGwOYwLkqNxXM04x4uT0FPZAJgXZq/RUNPISG5z/y3TIaWL6NbDjrF4llwUel5tCqyc3hsV6+Wr5wKi36V6ETL6R8uQ2cNYT1L9vv+ZdnCBD1s="
+  global:
+    secure: GKXELm3iiiVxv3hjNKvTeesXNLRJwGQo39S1SUSG8vJWgkxlidONcgtPa4sBweXPJTMY47o3F2gYnHb4yPMRrb/zxKnKVXBjPrTQPYqDUFOOGpj78n5k/QqVVeCgR/xl12f5RVOuCHMxF73fvCb6liVOaSZ72Wu6Qc/VTbM44O0=
 rvm:
-  - "1.9.3"
-  - "2.0.0"
+- 1.9.3
+- 2.0.0
 script: bundle exec rspec spec
