@@ -11,15 +11,9 @@ describe "finding a user" do
       end
     end
 
-    it "returns an object with sound attributes" do
+    it "returns an object with user attributes" do
       expect(user.username).to eq("alexgenco")
       expect(user.ref).to match(/\/people\/alexgenco/)
-    end
-
-    it "has many sounds" do
-      VCR.use_cassette(:alexgenco_sounds) do
-        expect(user.sounds).to respond_to(:to_ary)
-      end
     end
   end
 

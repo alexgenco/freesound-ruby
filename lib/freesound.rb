@@ -3,6 +3,7 @@ require "freesound/client"
 require "freesound/resources/base"
 require "freesound/resources/sound"
 require "freesound/resources/user"
+require "freesound/resources/pack"
 
 module Freesound
   class << self

@@ -15,6 +15,15 @@ module Freesound
           response["sounds"].map { |attrs| Sound.new(attrs) }
         end
       end
+
+      def packs(refresh=false)
+        @packs = nil if refresh
+
+        @packs ||= begin
+          response = get(:packs, {api_key: Freesound.api_key})
+          response["packs"].map { |attrs| Pack.new(attrs) }
+        end
+      end
     end
   end
 end
