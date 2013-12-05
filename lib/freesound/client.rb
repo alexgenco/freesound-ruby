@@ -18,6 +18,14 @@ module Freesound
       end
     end
 
+    def pack(id)
+      begin
+        Resources::Pack.find(id, params: query_params)
+      rescue ActiveResource::BadRequest
+        raise ResourceNotFound, "Pack with id #{id} not found"
+      end
+    end
+
     def search(query)
       Resources::Sound.get("search/", query_params(q: query))
     end
