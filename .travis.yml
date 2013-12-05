@@ -1,4 +1,6 @@
 language: ruby
+env:
+  secure: "KzqMaeNlAYR0WPJhtc76rV43ARaMzef/7biRGd0aWpep1M+PF6dqQe6wOchlgxGwOYwLkqNxXM04x4uT0FPZAJgXZq/RUNPISG5z/y3TIaWL6NbDjrF4llwUel5tCqyc3hsV6+Wr5wKi36V6ETL6R8uQ2cNYT1L9vv+ZdnCBD1s="
 rvm:
   - "1.9.2"
   - "1.9.3"
