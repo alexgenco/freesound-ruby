@@ -1,3 +1,5 @@
+require "freesound/resources"
+
 module Freesound
   class ResourceNotFound < RuntimeError; end
 
