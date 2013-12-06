@@ -20,36 +20,49 @@ Or install it yourself as:
 
 ## Usage
 
+You will need an [API key](http://www.freesound.org/api/apply) to use the Freesound gem:
+
 ```ruby
 require 'freesound'
-
-# You will need an API key to use the Freesound gem.
-# (you can get one at http://www.freesound.org/api/apply)
 Freesound.api_key = "your_api_key"
-
-# Instantiate a client:
-fs = Freesound::Client.new
-
-# To get a sound by its ID:
-sound = fs.sound(125)
-
-# Sounds will respond to any attributes returned by the API:
-sound.id         # => 125
-sound.bitrate    # => 1411
-sound.waveform_l # => "http://www.freesound.org/data/displays/0/125_23_wave_L.png"
-
-# To search for a sound with a query string:
-sounds = fs.search("badass")
-
-# To find a user by their username:
-me = fs.user("alexgenco")
-
-# Users also have attributes:
-me.username # => "alexgenco"
-
-# And sounds:
-me.sounds.size # => 10
 ```
+
+And a client object:
+
+```ruby
+client = Freesound::Client.new
+```
+
+Freesound exposes three resources: 
+[sounds](http://www.freesound.org/docs/api/resources.html#sound-resource), 
+[users](http://www.freesound.org/docs/api/resources.html#users), and 
+[packs](http://www.freesound.org/docs/api/resources.html#packs).
+You can request them directly from the client:
+
+```ruby
+sound = client.sound(17185)
+user  = client.user("alexgenco")
+pack  = client.pack(5107)
+```
+
+Resources will respond to any attributes returned by the API:
+
+```ruby
+sound.bitrate # => 1411
+user.username # => "alexgenco"
+pack.name     # => "Iceland"
+```
+
+You can also search for sounds:
+
+```ruby
+client.search("kick") # => (many sounds)
+```
+
+The Freesound API supports robust search filters, but this library doesn't
+support them quite yet.
+
+More features to come!
 
 ## Contributing
 
@@ -59,8 +72,6 @@ me.sounds.size # => 10
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
----
-
 You will need a Freesound.org API key to run the integration tests.
-
-Get one [here](http://www.freesound.org/api/apply) and assign it to the FREESOUND_KEY environment variable.
+Get one [here](http://www.freesound.org/api/apply) and assign it to the
+FREESOUND_KEY environment variable.
