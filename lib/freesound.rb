@@ -4,10 +4,7 @@ require "uri"
 require "freesound/version"
 require "freesound/client"
 require "freesound/collections"
-require "freesound/resources/base"
-require "freesound/resources/sound"
-require "freesound/resources/user"
-require "freesound/resources/pack"
+require "freesound/resources"
 
 module Freesound
   class << self
