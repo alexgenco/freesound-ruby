@@ -1,5 +1,4 @@
-require "helper"
-require "freesound"
+require "integration/helper"
 
 describe "a pack with resources" do
   let(:client) { Freesound::Client.new }

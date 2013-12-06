@@ -1,5 +1,4 @@
-require "helper"
-require "freesound"
+require "integration/helper"
 
 describe "finding a sound" do
   let(:client) { Freesound::Client.new }
