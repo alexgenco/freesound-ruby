@@ -38,8 +38,6 @@ module Freesound
         #     references :sounds
         #   end
         #
-        #   User.find("alexgenco").sounds # => an array of Sound objects
-        #
         def references(collection_name)
           resource_class = collection_name.to_s.singularize.camelize
 
