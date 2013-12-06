@@ -35,7 +35,7 @@ module Freesound
         # To setup a User that has many sounds:
         #
         #   class User
-        #     references(:sounds, Freesound::Resources::Sound)
+        #     references :sounds
         #   end
         #
         #   User.find("alexgenco").sounds # => an array of Sound objects
