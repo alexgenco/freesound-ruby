@@ -59,8 +59,8 @@ You can also search for sounds:
 client.search("kick") # => (many sounds)
 ```
 
-The Freesound API supports robust search filters, but this library doesn't
-support them quite yet.
+The Freesound API also supports pagination and robust search filters, but this
+library doesn't support them quite yet.
 
 More features to come!
 
