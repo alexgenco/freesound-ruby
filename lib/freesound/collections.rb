@@ -1,3 +1,5 @@
+require "active_resource"
+
 module Freesound
   module Collections
     class Base < ActiveResource::Collection

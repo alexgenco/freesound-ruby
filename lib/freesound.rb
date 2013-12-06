@@ -1,6 +1,3 @@
-require "active_resource"
-require "uri"
-
 require "freesound/version"
 require "freesound/client"
 require "freesound/collections"

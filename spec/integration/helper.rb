@@ -1,4 +1,5 @@
 require "helper"
+require "freesound"
 require "vcr"
 
 RSpec.configure do |config|

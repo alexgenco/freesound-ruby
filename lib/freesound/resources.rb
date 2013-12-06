@@ -1,3 +1,6 @@
+require "active_resource"
+require "uri"
+
 module Freesound
   module Resources
     class Base < ActiveResource::Base
