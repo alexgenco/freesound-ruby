@@ -11,8 +11,8 @@ module Freesound
         @sounds = nil if refresh
 
         @sounds ||= begin
-          response = get(:sounds, {api_key: Freesound.api_key})
-          response["sounds"].map { |attrs| Sound.new(attrs) }
+          path = URI.parse(super).path
+          Sound.find(:all, from: path, params: query_params)
         end
       end
 
@@ -20,8 +20,8 @@ module Freesound
         @packs = nil if refresh
 
         @packs ||= begin
-          response = get(:packs, {api_key: Freesound.api_key})
-          response["packs"].map { |attrs| Pack.new(attrs) }
+          path = URI.parse(super).path
+          Pack.find(:all, from: path, params: query_params)
         end
       end
     end

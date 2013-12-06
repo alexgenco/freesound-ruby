@@ -1,5 +1,3 @@
-require "active_resource"
-
 module Freesound
   module Resources
     class Base < ActiveResource::Base
@@ -12,12 +10,20 @@ module Freesound
       #
       # These are hacks to construct the URLs correctly because
       # ActiveResource does not append a trailing slash.
-      def self.element_path(id, *args)
-        super("#{id}/", *args)
+      class << self
+        def element_path(id, *args)
+          super("#{id}/", *args)
+        end
+
+        def get(path, *args)
+          super("#{path}/", *args)
+        end
       end
 
-      def get(path, *args)
-        super("#{path}/", *args)
+      private
+
+      def query_params(additional={})
+        {api_key: Freesound.api_key}.merge(additional)
       end
     end
   end

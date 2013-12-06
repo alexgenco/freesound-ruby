@@ -1,5 +1,9 @@
+require "active_resource"
+require "uri"
+
 require "freesound/version"
 require "freesound/client"
+require "freesound/collections"
 require "freesound/resources/base"
 require "freesound/resources/sound"
 require "freesound/resources/user"
