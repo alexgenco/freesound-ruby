@@ -48,3 +48,6 @@ doc
 
 # VCR Cassettes
 spec/fixtures/vcr_cassettes
+
+# Gem integration script
+script/gem_integration_test.sh
