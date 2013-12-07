@@ -4,6 +4,7 @@ Consume the [Freesound.org](http://www.freesound.org) API with Ruby.
 
 [![Build Status](https://travis-ci.org/alexgenco/freesound_ruby.png)](https://travis-ci.org/alexgenco/freesound_ruby)
 [![Code Climate](https://codeclimate.com/github/alexgenco/freesound_ruby.png)](https://codeclimate.com/github/alexgenco/freesound_ruby)
+[![Gem Version](https://badge.fury.io/rb/freesound_ruby.png)](http://badge.fury.io/rb/freesound_ruby)
 
 ## Installation
 
