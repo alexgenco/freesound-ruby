@@ -59,6 +59,18 @@ module Freesound
         end
       end
 
+      # Certain resource attributes contain dashes rather than underscores.
+      # This override allows resources with attributes like "preview-hq-mp3" to
+      # respond to "preview_hq_mp3" instead.
+      #
+      def initialize(attributes={}, *args)
+        underscored = attributes.inject({}) do |acc, (attr, value)|
+          acc.merge(attr.to_s.underscore => value)
+        end
+
+        super(underscored, *args)
+      end
+
       private
 
       def query_params(additional={})

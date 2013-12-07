@@ -16,6 +16,10 @@ describe "finding a sound" do
       expect(sound.tags).to respond_to(:to_ary)
     end
 
+    it "transforms dashified attributes to underscores" do
+      expect(sound.preview_hq_mp3).to respond_to(:to_str)
+    end
+
     it "belongs to a user" do
       expect(sound.user.username).to be_present
     end
