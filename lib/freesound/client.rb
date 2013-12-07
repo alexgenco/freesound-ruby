@@ -28,8 +28,8 @@ module Freesound
       end
     end
 
-    def search(query)
-      params = query_params(q: query)
+    def search(query, _params={})
+      params = query_params(q: query).merge(_params)
       Resources::Sound.find(:all, from: :search, params: params)
     end
 
