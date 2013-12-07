@@ -2,6 +2,12 @@ require "active_resource"
 
 module Freesound
   module Collections
+    # Collections are required to tell ActiveResource how to parse JSON
+    # responses that wrap a collection of resources.
+    #
+    # The #collection_key method provides the JSON key that will contain the
+    # resource data.
+    #
     class Base < ActiveResource::Collection
       def initialize(parsed={})
         @elements = parsed.fetch(collection_key)
