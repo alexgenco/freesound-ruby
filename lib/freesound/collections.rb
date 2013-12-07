@@ -16,7 +16,7 @@ module Freesound
       private
 
       def __collection_key
-        self.class.name.underscore
+        self.class.name.demodulize.underscore
       end
     end
 
