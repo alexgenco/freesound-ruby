@@ -29,7 +29,8 @@ module Freesound
     end
 
     def search(query)
-      Resources::Sound.get(:search, query_params(q: query))
+      params = query_params(q: query)
+      Resources::Sound.find(:all, from: :search, params: params)
     end
 
     private
