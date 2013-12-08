@@ -61,8 +61,22 @@ You can also search for sounds:
 client.search("kick") # => (many sounds)
 ```
 
-The Freesound API also supports pagination and robust search filters, but this
-library doesn't support them quite yet.
+Searches can be filtered as well:
+
+| Parameter         | Description
+| ----------------- | ----------------------------------------------------------------------------------------------- |
+| `p`               | The page of the search result to get                                                            |
+| `f`               | A filter string (see [docs](http://www.freesound.org/docs/api/resources.html#request) for info) |
+| `s`               | How to sort the results                                                                         |
+| `fields`          | Fields to return on each sound                                                                  |
+| `sounds_per_page` | Number of sounds to return in each page                                                         |
+| `g`               | Group results in packs                                                                          |
+
+For example, `client.search("kick", p: 1, sounds_per_page: 3)` will return the
+first 3 results of the search.
+
+See the [Freesound API docs](http://www.freesound.org/docs/api/resources.html#request)
+for more information on search parameters.
 
 More features to come!
 
