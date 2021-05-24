@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'freesound/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "freesound_ruby"
+  spec.name          = "freesound"
   spec.version       = Freesound::VERSION
   spec.authors       = ["Alex Genco"]
   spec.email         = ["alexgenco@gmail.com"]
   spec.summary       = "A Ruby library for consuming the Freesound.org API"
-  spec.homepage      = "https://github.com/alexgenco/freesound_ruby"
+  spec.homepage      = "https://github.com/alexgenco/freesound-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 1.9.3'
 
-  spec.add_dependency "activeresource", "~> 4.0.0"
+  spec.add_dependency "activeresource", "~> 5.0"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
