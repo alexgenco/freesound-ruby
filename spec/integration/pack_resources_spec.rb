@@ -1,6 +1,6 @@
 require "integration/helper"
 
-describe "a pack with resources" do
+RSpec.describe "a pack with resources" do
   let(:client) { Freesound::Client.new }
 
   let(:pack) do

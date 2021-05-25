@@ -1,6 +1,6 @@
 require "integration/helper"
 
-describe "finding a pack" do
+RSpec.describe "finding a pack" do
   let(:client) { Freesound::Client.new }
 
   context "that exists" do

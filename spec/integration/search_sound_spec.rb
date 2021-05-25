@@ -1,31 +1,19 @@
 require "integration/helper"
 
-describe "searching for a sound" do
+RSpec.describe "searching for a sound" do
   let(:client) { Freesound::Client.new }
 
   it "returns a list of sounds that match the query" do
-    sounds = VCR.use_cassette(:search_csharp) do
-      client.search("csharp")
-    end
+    search = client.search("csharp")
 
-    expect(sounds.size).to be > 0
-    expect(sounds.first.tags).to respond_to(:to_ary)
+    expect(search.results.size).to be > 0
+    expect(search.results.first.tags).to respond_to(:to_ary)
   end
 
   it "accepts additional query parameters" do
-    sounds = VCR.use_cassette(:search_bass_3_results) do
-      client.search("bass", p: 1, sounds_per_page: 2)
-    end
+    search = client.search("bass", page: 1, page_size: 2)
 
-    expect(sounds.size).to be(2)
-    expect(sounds.first.tags).to respond_to(:to_ary)
-  end
-
-  it "ignores unrecognized query parameters" do
-    expect {
-      VCR.use_cassette(:search_bass_invalid_query) do
-        client.search("bass", lol: :hi)
-      end
-    }.not_to raise_error
+    expect(search.results.size).to be(2)
+    expect(search.results.first.tags).to respond_to(:to_ary)
   end
 end

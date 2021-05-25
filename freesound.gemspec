@@ -19,11 +19,12 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 1.9.3'
 
-  spec.add_dependency "activeresource", "~> 5.0"
-
+  spec.add_dependency "http"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
-  spec.add_development_dependency "webmock", "~> 1.8.0"
-  spec.add_development_dependency "vcr",     "~> 2.8.0"
+  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "vcr"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "pry-byebug"
 end

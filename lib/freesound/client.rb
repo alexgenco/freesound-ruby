@@ -1,42 +1,24 @@
-require "freesound/resources"
+require "freesound/deserializer"
+require "freesound/http_base_path"
+require "freesound/search"
+require "http"
 
 module Freesound
   class ResourceNotFound < RuntimeError; end
 
   class Client
-    def sound(id)
-      begin
-        Resources::Sound.find(id, params: query_params)
-      rescue ActiveResource::BadRequest
-        raise ResourceNotFound, "Sound with id #{id} not found"
-      end
+    def initialize(api_key: Freesound.api_key, api_url: Freesound.api_url)
+      uri = URI.parse(api_url.to_s)
+      url, base_path = uri.merge("/"), uri.request_uri
+
+      @http = HTTP
+        .persistent(url)
+        .auth("Token #{api_key}")
+        .use(base_path: HTTPBasePath.new(base_path))
     end
 
-    def user(username)
-      begin
-        Resources::User.find(username, params: query_params)
-      rescue ActiveResource::BadRequest
-        raise ResourceNotFound, "User with username '#{username}' not found"
-      end
-    end
-
-    def pack(id)
-      begin
-        Resources::Pack.find(id, params: query_params)
-      rescue ActiveResource::BadRequest
-        raise ResourceNotFound, "Pack with id #{id} not found"
-      end
-    end
-
-    def search(query, _params={})
-      params = query_params(q: query).merge(_params)
-      Resources::Sound.find(:all, from: :search, params: params)
-    end
-
-    private
-
-    def query_params(additional={})
-      {api_key: Freesound.api_key}.merge(additional)
+    def search(query, **params)
+      Search.new(@http).text(query, **params)
     end
   end
 end
