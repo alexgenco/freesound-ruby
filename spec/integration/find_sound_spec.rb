@@ -5,34 +5,24 @@ RSpec.describe "finding a sound" do
 
   context "that exists" do
     let(:sound) do
-      VCR.use_cassette(:sound_18763) do
-        client.sound(18763)
-      end
+      client.sound(18763)
     end
 
     it "returns an object with sound attributes" do
       expect(sound.id).to be(18763)
-      expect(sound.ref).to match(/\/sounds\/18763/)
       expect(sound.tags).to respond_to(:to_ary)
     end
 
     it "transforms dashified attributes to underscores" do
-      expect(sound.preview_hq_mp3).to respond_to(:to_str)
-    end
-
-    it "belongs to a user" do
-      expect(sound.user.username).to be_present
+      expect(sound.previews.preview_hq_mp3).to respond_to(:to_str)
     end
   end
 
   context "that doesn't exist" do
     it "raises an exception" do
       expect {
-        VCR.use_cassette(:sound_unknown) do
-          client.sound(123456789)
-        end
-      }.to raise_error(Freesound::ResourceNotFound,
-                       /sound with id 123456789/i)
+        client.sound(123456789)
+      }.to raise_error(/unexpected status code 404/i)
     end
   end
 end

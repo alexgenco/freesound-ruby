@@ -5,11 +5,11 @@ module Freesound
     end
 
     def []=(key, value)
-      @attrs[key.to_sym] = walk_to_struct(value)
+      @attrs[normalize_key(key)] = walk_to_struct(value)
     end
 
     def [](key)
-      @attrs[key.to_sym]
+      @attrs[normalize_key(key)]
     end
 
     def to_struct
@@ -17,6 +17,10 @@ module Freesound
     end
 
     private
+
+    def normalize_key(str)
+      str.gsub(/-+/, "_").to_sym
+    end
 
     def walk_to_struct(obj, depth=0)
       if depth >= 10_000

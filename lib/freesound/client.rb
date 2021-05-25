@@ -1,6 +1,8 @@
 require "freesound/deserializer"
 require "freesound/http_base_path"
+require "freesound/http_raise_on_status"
 require "freesound/search"
+require "freesound/sound"
 require "http"
 
 module Freesound
@@ -15,10 +17,15 @@ module Freesound
         .persistent(url)
         .auth("Token #{api_key}")
         .use(base_path: HTTPBasePath.new(base_path))
+        .use(raise_on_status: RaiseOnStatus.new)
     end
 
     def search(query, **params)
       Search.new(@http).text(query, **params)
+    end
+
+    def sound(id, **params)
+      Sound.new(@http).get(id, **params)
     end
   end
 end
