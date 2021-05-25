@@ -3,6 +3,7 @@ require "freesound/http_base_path"
 require "freesound/http_raise_on_status"
 require "freesound/search"
 require "freesound/sound"
+require "freesound/user"
 require "http"
 
 module Freesound
@@ -26,6 +27,10 @@ module Freesound
 
     def sound(id, **params)
       Sound.new(@http).get(id, **params)
+    end
+
+    def user(username, **params)
+      User.new(@http).get(username, **params)
     end
   end
 end

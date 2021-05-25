@@ -14,7 +14,7 @@ module Freesound
 
     def wrap_response(response)
       if !response.status.success?
-        raise StatusException.new(response)
+        raise StatusException.new(response.flush)
       end
 
       response
