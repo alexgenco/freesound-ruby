@@ -1,6 +1,7 @@
 require "freesound/deserializer"
 require "freesound/http_base_path"
 require "freesound/http_raise_on_status"
+require "freesound/pack"
 require "freesound/search"
 require "freesound/sound"
 require "freesound/user"
@@ -31,6 +32,10 @@ module Freesound
 
     def user(username, **params)
       User.new(@http).get(username, **params)
+    end
+
+    def pack(id, **params)
+      Pack.new(@http).get(id, **params)
     end
   end
 end
