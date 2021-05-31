@@ -2,15 +2,17 @@
 
 Consume the [Freesound.org](http://www.freesound.org) API with Ruby.
 
-[![Build Status](https://travis-ci.org/alexgenco/freesound_ruby.png)](https://travis-ci.org/alexgenco/freesound_ruby)
-[![Code Climate](https://codeclimate.com/github/alexgenco/freesound_ruby.png)](https://codeclimate.com/github/alexgenco/freesound_ruby)
-[![Gem Version](https://badge.fury.io/rb/freesound_ruby.png)](http://badge.fury.io/rb/freesound_ruby)
+_Note_: This repository previously contained the `freesound_ruby` gem. To see the last snapshot of that gem's source, see the [freesound\_ruby-archive](https://github.com/alexgenco/freesound-ruby/pull/new/freesound_ruby-archive) branch.
+
+[![Build Status](https://travis-ci.org/alexgenco/freesound-ruby.png)](https://travis-ci.org/alexgenco/freesound_ruby)
+[![Code Climate](https://codeclimate.com/github/alexgenco/freesound-ruby.png)](https://codeclimate.com/github/alexgenco/freesound_ruby)
+[![Gem Version](https://badge.fury.io/rb/freesound.png)](http://badge.fury.io/rb/freesound)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'freesound_ruby'
+    gem 'freesound'
 
 And then execute:
 
@@ -18,7 +20,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install freesound_ruby
+    $ gem install freesound
 
 ## Usage
 
@@ -35,50 +37,7 @@ And a client object:
 client = Freesound::Client.new
 ```
 
-Freesound exposes three resources: 
-[sounds](http://www.freesound.org/docs/api/resources.html#sound-resource), 
-[users](http://www.freesound.org/docs/api/resources.html#users), and 
-[packs](http://www.freesound.org/docs/api/resources.html#packs).
-You can request them directly from the client:
-
-```ruby
-sound = client.sound(17185)
-user  = client.user("alexgenco")
-pack  = client.pack(5107)
-```
-
-Resources will respond to any attributes returned by the API:
-
-```ruby
-sound.bitrate # => 1411
-user.username # => "alexgenco"
-pack.name     # => "Iceland"
-```
-
-You can also search for sounds:
-
-```ruby
-client.search("kick") # => (many sounds)
-```
-
-Searches can be filtered as well:
-
-| Parameter         | Description
-| ----------------- | ----------------------------------------------------------------------------------------------- |
-| `p`               | The page of the search result to get                                                            |
-| `f`               | A filter string (see [docs](http://www.freesound.org/docs/api/resources.html#request) for info) |
-| `s`               | How to sort the results                                                                         |
-| `fields`          | Fields to return on each sound                                                                  |
-| `sounds_per_page` | Number of sounds to return in each page                                                         |
-| `g`               | Group results in packs                                                                          |
-
-For example, `client.search("kick", p: 1, sounds_per_page: 3)` will return the
-first 3 results of the search.
-
-See the [Freesound API docs](http://www.freesound.org/docs/api/resources.html#request)
-for more information on search parameters.
-
-More features to come!
+See the [specs](spec/freesound/client_spec.rb) for usage examples.
 
 ## Contributing
 
@@ -90,4 +49,4 @@ More features to come!
 
 You will need a Freesound.org API key to run the integration tests.
 Get one [here](http://www.freesound.org/api/apply) and assign it to the
-FREESOUND_KEY environment variable.
+FREESOUND\_KEY environment variable.
