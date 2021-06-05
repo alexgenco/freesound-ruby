@@ -1,0 +1,12 @@
+name: Release
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: GitHub Packages
+      uses: jstastny/publish-gem-to-github@master
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        owner: alexgenco
