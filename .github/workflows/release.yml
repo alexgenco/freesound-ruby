@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: GitHub Packages
-      uses: jstastny/publish-gem-to-github@master
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        owner: alexgenco
     - name: RubyGems
       uses: cadwallion/publish-rubygems-action@master
       env:
