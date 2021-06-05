@@ -1,6 +1,7 @@
 coverage
 rdoc
 doc
+pkg
 .yardoc
 .bundle
 *.swp
