@@ -1,0 +1,141 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/users/alexgenco/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '605'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '52'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://freesound.org/people/alexgenco/","username":"alexgenco","about":"","home_page":"","avatar":{"small":"https://freesound.org/media/images/32x32_avatar.png","large":"https://freesound.org/media/images/70x70_avatar.png","medium":"https://freesound.org/media/images/40x40_avatar.png"},"date_joined":"2009-03-19T02:59:14","num_sounds":0,"sounds":"https://freesound.org/apiv2/users/alexgenco/sounds/","num_packs":0,"packs":"https://freesound.org/apiv2/users/alexgenco/packs/","num_posts":0,"num_comments":0,"bookmark_categories":"https://freesound.org/apiv2/users/alexgenco/bookmark_categories/"}'
+  recorded_at: Sat, 05 Jun 2021 16:22:52 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/users/alexgenco/sounds/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '52'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '54'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":0,"next":null,"previous":null,"results":[]}'
+  recorded_at: Sat, 05 Jun 2021 16:22:52 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/users/alexgenco/packs/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '52'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '51'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":0,"next":null,"previous":null,"results":[]}'
+  recorded_at: Sat, 05 Jun 2021 16:22:52 GMT
+recorded_with: VCR 6.0.0

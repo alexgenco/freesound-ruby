@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/packs/5107/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:48 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '251'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '45'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":5107,"url":"https://freesound.org/people/dobroide/packs/5107/","description":"","created":"2009-09-01T19:56:15","name":"Iceland","username":"dobroide","num_sounds":32,"sounds":"https://freesound.org/apiv2/packs/5107/sounds/","num_downloads":144}'
+  recorded_at: Sat, 05 Jun 2021 16:22:48 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/packs/5107/sounds/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:48 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3478'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '148'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":32,"next":"https://freesound.org/apiv2/packs/5107/sounds/?page=2","previous":null,"results":[{"id":79275,"name":"20090828.krisuvik.hotspring.03.wav","tags":["flickr","field-recording","geothermal","hotspring","iceland","nature","bubbling","volcano"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":79274,"name":"20090828.krisuvik.hotspring.02.wav","tags":["bubbling","field-recording","geothermal","hotspring","iceland","nature","volcano"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":79273,"name":"20090828.krisuvik.hotspring.01.wav","tags":["hotspring","field-recording","geothermal","bubbling","iceland","volcano","nature"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":79265,"name":"20090828.skogar.waterfall..wav","tags":["flickr","iceland","field-recording","splashing","water","waterfall","nature"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":79264,"name":"20090828.reynis.beach.waves.02.wav","tags":["breaking-waves","ocean","beach","nature","surf","water","waves","field-recording","iceland"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":79263,"name":"20090828.reynis.beach.waves.01.wav","tags":["flickr","breaking-waves","field-recording","iceland","nature","ocean","surf","beach","waves"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78926,"name":"20090827.waterfall.wav","tags":["climate-change","global-warming","flickr","glacier","waterfall","iceland","nature","water","field-recording"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78925,"name":"20090827.trickel.wav","tags":["water","global-warming","climate-change","flickr","glacier","nature","trickle","field-recording"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78924,"name":"20090827.surf.wav","tags":["field-recording","nature","water","storm","splash","sea","rocks","ocean","surf","iceland","waves"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78923,"name":"20090827.stream.wav","tags":["flickr","climate-change","global-warming","glacier","water","iceland","nature","stream","field-recording"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78922,"name":"20090827.single.wave.wav","tags":["splash","storm","coast","water","beach","sea","surf","wave","field-recording","iceland","nature","ocean"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78921,"name":"20090827.pony.wav","tags":["flickr","farm","grass","pasture","iceland","nature","chewing","pony","field-recording","grazing","horse"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78920,"name":"20090827.harmonium.wav","tags":["harmonium","iceland","instrument","reed"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78808,"name":"20090826.path.wav","tags":["birds","bleating","field-recording","iceland","nature","path","tundra","walking","water"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"},{"id":78801,"name":"20090826.lake.waves.02.wav","tags":["field-recording","iceland","lake","nature","water","waves"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"dobroide"}]}'
+  recorded_at: Sat, 05 Jun 2021 16:22:48 GMT
+recorded_with: VCR 6.0.0

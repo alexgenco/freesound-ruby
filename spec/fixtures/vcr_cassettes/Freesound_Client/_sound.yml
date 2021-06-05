@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/sounds/18763/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:50 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3211'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '57'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":18763,"url":"https://freesound.org/people/terminal/sounds/18763/","name":"SWING1MT.WAV","tags":["baby-swing","machine","mechanical","mechanism","motion"],"description":"20
+        second recording of the sound of a \"rocking motion\" mechanism from a battery
+        powered baby''s swing chair, set on #2 switch mode setting (longest swing
+        period). Ambient stereo image recorded using spaced pair of Rode NT1A mics,
+        mixed with a single Rode NT3 placed adjacent the rocker mechanism. Lightly
+        processed the stereo bus with compression, and added +8db of gain.","geotag":null,"created":"2006-05-08T05:19:13","license":"http://creativecommons.org/licenses/by/3.0/","type":"wav","channels":2,"filesize":5760140,"bitrate":2250,"bitdepth":24,"duration":20.0003,"samplerate":48000.0,"username":"terminal","pack":null,"pack_name":null,"download":"https://freesound.org/apiv2/sounds/18763/download/","bookmark":"https://freesound.org/apiv2/sounds/18763/bookmark/","previews":{"preview-lq-ogg":"https://freesound.org/data/previews/18/18763_65748-lq.ogg","preview-lq-mp3":"https://freesound.org/data/previews/18/18763_65748-lq.mp3","preview-hq-ogg":"https://freesound.org/data/previews/18/18763_65748-hq.ogg","preview-hq-mp3":"https://freesound.org/data/previews/18/18763_65748-hq.mp3"},"images":{"spectral_m":"https://freesound.org/data/displays/18/18763_65748_spec_M.jpg","spectral_l":"https://freesound.org/data/displays/18/18763_65748_spec_L.jpg","spectral_bw_l":"https://freesound.org/data/displays/18/18763_65748_spec_bw_L.jpg","waveform_bw_m":"https://freesound.org/data/displays/18/18763_65748_wave_bw_M.png","waveform_bw_l":"https://freesound.org/data/displays/18/18763_65748_wave_bw_L.png","waveform_l":"https://freesound.org/data/displays/18/18763_65748_wave_L.png","waveform_m":"https://freesound.org/data/displays/18/18763_65748_wave_M.png","spectral_bw_m":"https://freesound.org/data/displays/18/18763_65748_spec_bw_M.jpg"},"num_downloads":563,"avg_rating":3.9,"num_ratings":10,"rate":"https://freesound.org/apiv2/sounds/18763/rate/","comments":"https://freesound.org/apiv2/sounds/18763/comments/","num_comments":1,"comment":"https://freesound.org/apiv2/sounds/18763/comment/","similar_sounds":"https://freesound.org/apiv2/sounds/18763/similar/","analysis":"No
+        descriptors specified. You should indicate which descriptors you want with
+        the ''descriptors'' request parameter.","analysis_frames":"https://freesound.org/data/analysis/18/18763_65748_frames.json","analysis_stats":"https://freesound.org/apiv2/sounds/18763/analysis/","ac_analysis":{"ac_tempo_confidence":0.9990793466567993,"ac_note_confidence":0.31825798749923706,"ac_depth":42.77804192616394,"ac_note_midi":72,"ac_temporal_centroid":0.5014914870262146,"ac_warmth":35.518741807242925,"ac_loop":true,"ac_hardness":67.36544887214976,"ac_loudness":-20.661312103271484,"ac_reverb":true,"ac_roughness":52.844225970370964,"ac_log_attack_time":1.123535394668579,"ac_boominess":12.61973852116183,"ac_note_frequency":509.23529052734375,"ac_tempo":87,"ac_brightness":70.1626420945077,"ac_sharpness":59.69658605754027,"ac_tonality_confidence":0.5170411467552185,"ac_dynamic_range":1.0401725769042969,"ac_note_name":"C5","ac_tonality":"C#
+        major","ac_single_event":false}}'
+  recorded_at: Sat, 05 Jun 2021 16:22:50 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/sounds/18763/similar/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3907'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '1093'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":484792,"next":"https://freesound.org/apiv2/sounds/18763/similar/?&target=18763&page=2","results":[{"id":18763,"name":"SWING1MT.WAV","tags":["baby-swing","machine","mechanical","mechanism","motion"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"terminal","distance_to_target":0.0},{"id":152979,"name":"piss
+        on the bath","tags":["piss","pee","campus-upf","UPF-CS12","bath","Bathroom","toilet"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"dianser72","distance_to_target":0.5714735984802246},{"id":157581,"name":"Nightmare.wav","tags":["nightmare","deep","haunted","dark","voices","evil","demon","horror","spooky","devil","scary","ghost"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"husky70","distance_to_target":0.5835305452346802},{"id":56369,"name":"Deszcz
+        - kapie na okno (2).wav","tags":["downpour","field-recording","loop","rain","storm","tempest","thunder","wind","window"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"kwazi","distance_to_target":0.6033912897109985},{"id":50630,"name":"splash.wav","tags":["flushing","h4","toilette","wc","zoom"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"maykie993","distance_to_target":0.6144280433654785},{"id":253102,"name":"Traktori
+        ja niittokone, vanha / Old tractor and a mower on the field working, Fordson
+        Major, a 1956 model","tags":["Agriculture","Soundfx","Yleisradio","Yle","Tehosteet","Sadonkorjuu","Finland","Harvest","Suomi","Finnish-Broadcasting-Company","Field-Recording","Maatalous","Maanviljely"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"YleArkisto","distance_to_target":0.6200709939002991},{"id":468515,"name":"APPLAUSE
+        - 2","tags":["auditorium","clap","hand-clapping","claps","music","cheer","cheering","audience","applauding","clapping","adults","applaud","crowd","applause","group","concert"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"SamuelGremaud","distance_to_target":0.6238858699798584},{"id":35824,"name":"explosion
+        ici.mp3","tags":["explosion"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"anysounds","distance_to_target":0.6282362937927246},{"id":99284,"name":"Fira
+        de Sant Baldiri.wav","tags":["ambient","people","street"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"paubg_pou","distance_to_target":0.6284694075584412},{"id":202260,"name":"Cyril_Voignier_2013_Metallic_Sound.WAV","tags":["metallic","sewer","strange"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"iut_Paris8","distance_to_target":0.6340969204902649},{"id":217210,"name":"Tempesta
+        Marina","tags":["sonsdebarcelona","sea","kids","fiction","folley","tempesta","tapies","mar"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"sonsdebarcelona","distance_to_target":0.639295220375061},{"id":198088,"name":"Applause
+        One.wav","tags":["auditorium","hall","live","field","II","tascam","MK","Dr-07","Crowd","Applause","recording","concert"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"Littleboot","distance_to_target":0.6467642784118652},{"id":543581,"name":"3
+        Weiheren St. Gallen Wasserrohr.mp3","tags":["water","saintgallen","waterpipe"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"darrenmichaels","distance_to_target":0.6528944373130798},{"id":77399,"name":"zielona.mp3","tags":["bag","pavement","poznan","tramway","zielona","street"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"miastodzwiekow","distance_to_target":0.6554187536239624},{"id":77793,"name":"ostriconi.mp3","tags":["wind-noise","corsica","marralabs","ostriconi","beach","sound","waves","shore"],"license":"http://creativecommons.org/licenses/sampling+/1.0/","username":"marralabs","distance_to_target":0.6578179001808167}],"previous":null}'
+  recorded_at: Sat, 05 Jun 2021 16:22:51 GMT
+recorded_with: VCR 6.0.0

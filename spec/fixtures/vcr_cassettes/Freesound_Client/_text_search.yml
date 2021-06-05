@@ -1,0 +1,146 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/content/?descriptors_filter=bass&filter=duration:%5B0.5%20TO%20100.0%5D&page=1&page_size=2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '645'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '596'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":484792,"next":"https://freesound.org/apiv2/search/content/?&descriptors_filter=bass&page=2&page_size=2","results":[{"id":304842,"name":"Roland
+        Jupiter 4 - Res - E#4 (jp4 - Res-65-127-JULE.aif)","tags":["multisample","single-note","synthesizer","Roland-Jupiter-4","midi-note-65","ESharp4"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"modularsamples"},{"id":279935,"name":"Akai
+        AX80 - Small Thing - C3 (48-AKUP.aif)","tags":["multisample","single-note","synthesizer","Akai-AX80","midi-note-48","C3"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"modularsamples"}],"previous":null}'
+  recorded_at: Sat, 05 Jun 2021 16:22:46 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/content/?descriptors_filter=bass&page=2&page_size=2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '675'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '575'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":484792,"next":"https://freesound.org/apiv2/search/content/?&descriptors_filter=bass&page=3&page_size=2","results":[{"id":116855,"name":"fdbck50xf49delay24ms.wav","tags":["cross","delay","echo","feedback","synthetic"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"Jackie4Ever"},{"id":304844,"name":"Roland
+        Jupiter 4 - Res - F#4 (jp4 - Res-67-127-T5N7.aif)","tags":["multisample","single-note","synthesizer","Roland-Jupiter-4","midi-note-67","FSharp4"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"modularsamples"}],"previous":"https://freesound.org/apiv2/search/content/?&descriptors_filter=bass&page=1&page_size=2"}'
+  recorded_at: Sat, 05 Jun 2021 16:22:47 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/content/?descriptors_filter=bass&page=1&page_size=2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '645'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '151'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":484792,"next":"https://freesound.org/apiv2/search/content/?&descriptors_filter=bass&page=2&page_size=2","results":[{"id":304842,"name":"Roland
+        Jupiter 4 - Res - E#4 (jp4 - Res-65-127-JULE.aif)","tags":["multisample","single-note","synthesizer","Roland-Jupiter-4","midi-note-65","ESharp4"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"modularsamples"},{"id":279935,"name":"Akai
+        AX80 - Small Thing - C3 (48-AKUP.aif)","tags":["multisample","single-note","synthesizer","Akai-AX80","midi-note-48","C3"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"modularsamples"}],"previous":null}'
+  recorded_at: Sat, 05 Jun 2021 16:22:47 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/content/?descriptors_filter=lowlevel.pitch.var:%5B*%20TO%2020%5D&page=1&page_size=2&target=lowlevel.pitch.mean:440
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:54 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '595'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '647'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":5385,"next":"https://freesound.org/apiv2/search/content/?&descriptors_filter=lowlevel.pitch.var:[*%20TO%2020]&target=lowlevel.pitch.mean:440&page=2&page_size=2","results":[{"id":34110,"name":"button
+        (8).wav","tags":["beeps","buttons","website"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"kwazi","distance_to_target":1.996755599975586e-06},{"id":41762,"name":"bellA4.wav","tags":["bell","multisample","pad","synth"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"NoiseCollector","distance_to_target":2.0265579223632812e-06}],"previous":null}'
+  recorded_at: Sat, 05 Jun 2021 16:22:54 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/content/?descriptors_filter=lowlevel.pitch.var:%5B*%20TO%2020%5D&page=2&page_size=2&target=lowlevel.pitch.mean:440
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:54 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '882'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '369'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":5385,"next":"https://freesound.org/apiv2/search/content/?&descriptors_filter=lowlevel.pitch.var:[*%20TO%2020]&target=lowlevel.pitch.mean:440&page=3&page_size=2","results":[{"id":308690,"name":"Roland
+        JX-8P - Sample & Hold it - A5 (81A4-V7TW.aif)","tags":["multisample","single-note","synthesizer","Roland-JX-8P","midi-note-81","A5","midi-velocity-8"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"modularsamples","distance_to_target":3.6656856536865234e-06},{"id":208579,"name":"khelil
+        raja son3 auda.wav","tags":["frequency","wareform","amplitude","carrer"],"license":"http://creativecommons.org/licenses/by-nc/3.0/","username":"iut_Paris8","distance_to_target":5.7220458984375e-06}],"previous":"https://freesound.org/apiv2/search/content/?&descriptors_filter=lowlevel.pitch.var:[*%20TO%2020]&target=lowlevel.pitch.mean:440&page=1&page_size=2"}'
+  recorded_at: Sat, 05 Jun 2021 16:22:54 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/content/?descriptors_filter=lowlevel.pitch.var:%5B*%20TO%2020%5D&page=1&page_size=2&target=lowlevel.pitch.mean:440
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:22:55 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '595'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '64'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":5385,"next":"https://freesound.org/apiv2/search/content/?&descriptors_filter=lowlevel.pitch.var:[*%20TO%2020]&target=lowlevel.pitch.mean:440&page=2&page_size=2","results":[{"id":34110,"name":"button
+        (8).wav","tags":["beeps","buttons","website"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"kwazi","distance_to_target":1.996755599975586e-06},{"id":41762,"name":"bellA4.wav","tags":["bell","multisample","pad","synth"],"license":"http://creativecommons.org/licenses/by/3.0/","username":"NoiseCollector","distance_to_target":2.0265579223632812e-06}],"previous":null}'
+  recorded_at: Sat, 05 Jun 2021 16:22:55 GMT
+recorded_with: VCR 6.0.0

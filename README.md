@@ -47,6 +47,4 @@ See the [specs](spec/freesound/client_spec.rb) for usage examples.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-You will need a Freesound.org API key to run the integration tests.
-Get one [here](http://www.freesound.org/api/apply) and assign it to the
-FREESOUND\_KEY environment variable.
+Integration tests use [VCR](https://github.com/vcr/vcr) to record/playback responses. If you add/change a test, or re-record a test using `VCR_RECORD_MODE=all`, you will need to set `FREESOUND_KEY` to a valid [API key](http://www.freesound.org/api/apply).

@@ -24,5 +24,9 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.configure_rspec_metadata!
 
+  if record_mode = ENV["VCR_RECORD_MODE"]
+    config.default_cassette_options[:record_mode] = record_mode
+  end
+
   config.filter_sensitive_data("<FREESOUND_KEY>") { ENV.fetch("FREESOUND_KEY") }
 end

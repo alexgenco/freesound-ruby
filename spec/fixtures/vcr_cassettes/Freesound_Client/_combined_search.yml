@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/combined/?filter=bass&page=1&page_size=2&target=lowlevel.pitch.mean:220%20lowlevel.pitch.var:100
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:25:20 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '774'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '13397'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"id":310396,"name":"Roland SH-2 - Ghost Bass - A4 (69A3-A43G.aif)","tags":["multisample","single-note","synthesizer","Roland-SH-2","midi-note-69","A4"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"modularsamples","distance_to_target":7.778862709528767e-06},{"id":153827,"name":"Double-bass
+        A-3 Pizzicato Non-Vibrato","tags":["double-bass","chordophone","string-instrument","a-3","mezzoforte","pizzicato","non-vibrato","zoom-h2n","multisample"],"license":"http://creativecommons.org/licenses/by-nc/3.0/","username":"Carlos_Vaquero","distance_to_target":1.9413577319937758e-05}],"more":"https://freesound.org/apiv2/search/combined/?&query=&filter=bass&target=lowlevel.pitch.mean:220%20lowlevel.pitch.var:100&page_size=2&cs_lcvidp=32"}'
+  recorded_at: Sat, 05 Jun 2021 16:25:20 GMT
+- request:
+    method: get
+    uri: https://freesound.org/apiv2/search/combined/?cs_lcvidp=32&filter=bass&page_size=2&query=&target=lowlevel.pitch.mean:220%20lowlevel.pitch.var:100
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Token <FREESOUND_KEY>
+      Connection:
+      - Keep-Alive
+      Host:
+      - freesound.org
+      User-Agent:
+      - http.rb/5.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - istio-envoy
+      Date:
+      - Sat, 05 Jun 2021 16:25:38 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '598'
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, POST, HEAD, OPTIONS
+      X-Freesound-Host:
+      - fs-k8sx
+      X-Mapped-Host:
+      - freesound.org
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Envoy-Upstream-Service-Time:
+      - '17800'
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"id":391401,"name":"005_wobble_220","tags":["sample","sub","wobble","supercollider","low","bass"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"tatimeow","distance_to_target":2.8287176974117756e-05},{"id":201425,"name":"57-bboc1.aif","tags":["sample","multi","bass","synth"],"license":"http://creativecommons.org/publicdomain/zero/1.0/","username":"Tverse","distance_to_target":3.926839053747244e-05}],"more":"https://freesound.org/apiv2/search/combined/?&query=&filter=bass&target=lowlevel.pitch.mean:220%20lowlevel.pitch.var:100&page_size=2&cs_lcvidp=68"}'
+  recorded_at: Sat, 05 Jun 2021 16:25:38 GMT
+recorded_with: VCR 6.0.0

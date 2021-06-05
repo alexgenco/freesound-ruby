@@ -6,6 +6,4 @@ doc
 *.swp
 *.gem
 spec/examples.txt
-spec/fixtures/vcr_cassettes
-script/gem_integration_test.sh
 Gemfile.lock
