@@ -25,7 +25,7 @@ VCR.configure do |config|
   config.configure_rspec_metadata!
 
   if record_mode = ENV["VCR_RECORD_MODE"]
-    config.default_cassette_options[:record_mode] = record_mode
+    config.default_cassette_options[:record] = record_mode.to_sym
   end
 
   config.filter_sensitive_data("<FREESOUND_KEY>") { ENV.fetch("FREESOUND_KEY") }
