@@ -7,7 +7,6 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
         ruby:
-          - "2.5"
           - "2.6"
           - "2.7"
           - "3.0"
@@ -22,3 +21,4 @@ jobs:
     - run: bundle exec rake
       env:
         VCR_RECORD_MODE: none
+        FREESOUND_KEY: _
