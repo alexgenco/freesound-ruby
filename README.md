@@ -5,7 +5,6 @@ Consume the [Freesound.org](http://www.freesound.org) API with Ruby.
 _Note_: This repository previously contained the `freesound_ruby` gem. To see the last snapshot of that gem's source, see the [freesound\_ruby-archive](https://github.com/alexgenco/freesound-ruby/pull/new/freesound_ruby-archive) branch.
 
 [![Build Status](https://github.com/alexgenco/freesound-ruby/actions/workflows/test.yml/badge.svg)](https://github.com/alexgenco/freesound-ruby/actions/workflows/test.yml)
-[![Code Climate](https://codeclimate.com/github/alexgenco/freesound-ruby.png)](https://codeclimate.com/github/alexgenco/freesound_ruby)
 [![Gem Version](https://badge.fury.io/rb/freesound.png)](http://badge.fury.io/rb/freesound)
 
 ## Installation
